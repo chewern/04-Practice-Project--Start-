@@ -1,7 +1,7 @@
 name: workflow 1
 on: push
 jobs:
-  run-linters:
+  all-jobs-in-series:
     name: Run linting
     runs-on: ubuntu-latest
     steps:
@@ -20,4 +20,4 @@ jobs:
           echo "run ends"
 
       - name: run build
-        run: npm run dev
+        run: npm run build
